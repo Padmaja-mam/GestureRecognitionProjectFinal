@@ -1,0 +1,60 @@
+<html>
+  <head>
+    <title>Gesture Recognition Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.js"></script>
+    
+    <link rel = "stylesheet" href = "style.css">
+
+</head>
+  
+  <body>
+    
+ <center>
+   
+   <h1 style = "color : lime; background-color : black"> Gesture Recognition </h1>
+   <br> <br>
+   <h2> This model can identify these 3 gestures : </h2>
+   <br>
+   
+   <h3 style = "color : magenta; background-color: black;"> <b> Super &#128076, Thumbs-up &#128077, Thumbs-down &#128078 </b> </h3>
+   
+   <br> <br>
+   
+   <div class="col-md-4 col-sm-12 col-xs-12">
+   <h2> Webcam : </h2>
+   
+   <div id = "camera"> </div>
+   <br>
+   <button id="click_button" onclick="take_snapshot()"> Capture image </button>
+     
+   </div>
+ 
+   <div class="col-md-4 col-sm-12 col-xs-12">
+  
+     <h2> Preview your image here : </h2>
+     <div id = "preview"> </div>
+     <br>
+   <button id="check_button" onclick="check()"> Identify image </button>
+     
+   </div>
+   
+   <div class="col-md-2 col-sm-12 col-xs-12">
+    
+    <h2> Result :  <span id="update_emoji"> </span> </h2>
+   <p style="font-size: 22px;"> Gesture name: <span id="result_name"></span> </p>
+   <p style="font-size: 22px;"> Accuracy : <span id="result_accuracy"></span> </p>
+ 
+  </div>
+
+   <script src="main.js"></script>
+   
+   </body>
+    
+    </html>
